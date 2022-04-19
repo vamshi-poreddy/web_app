@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--Linking the CSS document with this html file using below tag-->
+<link rel="stylesheet" type="text/css" href="stylesheets\stylesheet1.css">
+</head>
+<title > Books & Posters</title>
+<body>
+
+
+<!--Header of the website which contacins the site name and account, cart and contact us links-->
+<div class="header">
+  <ul> <a href="cart.html"><b>Cart</b></a></ul>
+  <ul><a href="account.html"><b>Account</b></a></ul>
+  <ul><a href="contact.html" target="blank"><b>Contact Us</b></a></ul>
+  <h1>BOOKS & POSTERS</h1>
+</div>
+
+
+<!--Creation of Navigation bar with unordered list and list elements-->
+<div class="topnav" id="navbar"><b>
+<ul>
+  <li><button class="openbtn" onclick="openNav()">☰ BnP Menu</button></li>
+  <li><input type="text" placeholder="Search.."></li>
+  </ul></b>
+</div>
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="index.html">Home</a>
+  <span class="dropdown">
+<!--Creation of Dropdown button with drop down elements as links-->
+  <a href="books.html" class="dropbtn">Books</a>
+  <div class="dropdown-content">
+  <a href="#">Classics</a>
+  <a href="#">Biographies</a>
+  <a href="#">Fiction</a>
+  </div></span>
+  <a href="magzines.html">Magzines</a>
+  <a href="#" style= "color:#cc0099">Comics</a>
+  <a href="posters.html">Posters</a>
+  <a href="account.html"><b>Account</b></a>
+  <a href="contact.html" target="blank"><b>Contact Us</b></a>
+</div>
+
+<div class="content">
+<img src="Images\comic_back.jpg" width=100% height=500>
+
+<div class="bestsellers">
+<span class="bs"><p style="color:black; background-color:#b3b3ff;text-decoration:underline ">Welcome to Comic World</p></span>
+</div>
+
+<div class="row">
+  <div class="column" style="padding-left:150px;">
+    <div class="polaroid">
+    <img src="Images\comic1.jpg" alt="Beta Ray Bill" style="width:100%; height:200px">
+    <div class="container">
+    <p>Beta Ray Bill</p>
+    </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="polaroid">
+    <img src="Images\comic2.jpg" alt="Marvel X-Men" style="width:100%; height:200px">
+    <div class="container">
+    <p>Marvel X-Men</p>
+    </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="polaroid">
+    <img src="Images\comic3.jpg" alt="DC Night Wing" style="width:100%; height:200px">
+    <div class="container">
+    <p>DC Night Wing</p>
+    </div>
+    </div>
+  </div>
+  <div class="column">
+  <div class="polaroid">
+  <img src="Images\comic4.jpg" alt="DC Batman" style="width:100%; height:200px">
+  <div class="container">
+  <p>DC Batman</p>
+  </div>
+  </div>
+  </div>
+  <div class="column">
+    <div class="polaroid">
+    <img src="Images\comic5.jpg" alt="Star Wars" style="width:100%; height:200px">
+    <div class="container">
+    <p>Star Wars</p>
+    </div>
+    </div>
+   </div>
+</div></div><br>
+
+
+<!--Adding a Video from youtube url-->
+<div style="padding-left:35%">
+<iframe width="450" height="250" src="https://www.youtube.com/embed/tgbNymZ7vqY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div><br>
+
+
+
+<!--footer section which has the policies, account, social, and contact us details in unordered lists with lists items divided into 4 columns-->
+<div class="last">
+        <div class="last1">
+            <ul>
+                <li>
+                    <label><a href="account.html">My Account</a></label>
+                </li>
+                <li>Orders</li>
+                <li>Track Order </li>
+                <li>Frequently Asked Questions </li>
+            </ul>
+        </div>
+        <div class="last2">
+            <ul>
+                <li>
+                    <label>Policies</label>
+                </li>
+                <li>Offer Terms & Conditions</li>
+                <li>Returns & Exchange Policy</li>
+                <li>Privacy Policy</li>
+            </ul>
+        </div>
+
+        <div class="last3">
+            <ul>
+                <li>
+                    <label><a href="contact.html" target="_blank">Contact Us</a></label>
+                </li><br>
+                <li>
+                    <label> About Us</label>
+                </li>
+                <li>Official Brand Store</li>
+                <li>Careers</li>
+            </ul>
+        </div>
+        <div class="last4">
+            <ul>
+                <li>
+                    <label>Social</label>
+                </li>
+                <li>Facebook </li>
+                <li>Twitter</li>
+                <li>YouTube </li>
+            </ul>
+        </div>
+</div>
+
+<!--Footer section which has the copyright of the store-->
+<div class="footer">
+<p> &copy; Books & Posters 2022 unless otherwise stated</p>
+</div>
+</div>
+
+<script src="javascript\menu.js"></script>
+<script>window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}</script>
+
+
+</body>
+</html>

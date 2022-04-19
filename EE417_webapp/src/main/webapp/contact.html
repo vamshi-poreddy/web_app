@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="stylesheets\stylesheet1.css">
+<script src="javascript\menu.js"></script>
+<script src="javascript/validation.js"></script>
+</head>
+<title> Books & Posters</title>
+<body>
+
+<div class="header">
+  <ul> <a href="cart"><b>Cart</b></a></ul>
+  <ul> <a href="#" style="color:black"><b>Contact Us</b></a></ul>
+  <h1>BOOKS & POSTERS</h1>
+</div>
+
+<!--Creation of Navigation bar with unordered list and list elements-->
+<div class="topnav" id="navbar"><b>
+  <ul>
+    <li><button class="openbtn" onclick="openNav()">☰ BnP Menu</button></li>
+    <li><input type="text" placeholder="Search.."></li>
+    </ul></b>
+  </div>
+
+<!--Dynamic Menu bar creation-->
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="index.html">Home</a><button class="openbtn" onclick="openNav2()" style="float:right;color:black;background-color:white;font-size:20px;">></button>
+  <span class="dropdown">
+<!--Creation of Dropdown button with drop down elements as links-->
+  <a href="books.html" class="dropbtn">Books</a>
+  <div class="sidebar" id="mySidebar2">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()"><</a>
+  <a style= "color:#cc0099">Books</a>
+  <a href="#">Classics</a>
+  <a href="#">Biographies</a>
+  <a href="#">Fiction</a>
+  </div></span>
+  <a href="magzines.html">Magzines</a>
+  <a href="comics.html">Comics</a>
+  <a href="posters.html">Posters</a>
+  <a href="account.html"><b>Account</b></a>
+  <a href="#" style= "color:#cc0099"><b>Contact Us</b></a>
+</div>
+
+
+<div class="content">
+<div class="info">
+<p align="center"><b>Contact us on: </b>Tel: +353 XXXXXXXX, Mobile: +353 XXXXXXXXX</p>
+<p align="center"><b>Mail us for Queries at: </b>info@booksnposters.ie</p>
+<b>You can further Contact Us by filling out the below online form regarding your queries.</b>
+</div>
+
+<div class="form">
+<form name="contact" autocomplete="off" onsubmit="return upload()" action="QueryServlet" method="POST">
+    <label for="fname">Full Name</label><span style="color:red; display: inline;">*</span>
+    <input type="text" id="fname" name="fullname" placeholder="Your Name.."onclick="suggest()"><span id="fsug"></span><br>
+    <label for="email">Email</label><span style="color:red; display: inline;">*</span>
+    <input type="text" id="email" name="Email" placeholder="Enter Your Email.." onclick="suggestemail()"><span id="esug"></span><br>
+    <label for="Query">Type of Query</label><span style="color:red; display: inline;">*</span>
+    <select id="query" name="query">
+      <option value="delivery">Delivery</option>
+      <option value="payment">Payment</option>
+      <option value="stock">Item Stock</option>
+      <option value="other">Other</option>
+    </select>
+    <label>Details</label><span style="color:red; display: inline;">*</span>
+    <input type="text" name="det" rows="5" cols="60"  style="resize: none;" id="det" onclick="detsuggest()"></input><span id="dsug"></span><br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+<div style="padding:10px"></div>
+
+<div class="last">
+        <div class="last1">
+            <ul>
+                <li>
+                    <label><a href="account.html">My Account</a></label>
+                </li>
+                <li>Orders</li>
+                <li>Track Order </li>
+                <li>Frequently Asked Questions </li>
+            </ul>
+        </div>
+        <div class="last2">
+            <ul>
+                <li>
+                    <label>Policies</label>
+                </li>
+                <li>Offer Terms & Conditions</li>
+                <li>Returns & Exchange Policy</li>
+                <li>Privacy Policy</li>
+            </ul>
+        </div>
+
+        <div class="last3">
+            <ul>
+                <li>
+                    <label><a href="#">Contact Us</a></label>
+                </li><br>
+                <li>
+                    <label> About Us</label>
+                </li>
+                <li>Official Brand Store</li>
+                <li>Careers</li>
+            </ul>
+        </div>
+        <div class="last4">
+            <ul>
+                <li>
+                    <label>Social</label>
+                </li>
+                <li>Facebook </li>
+                <li>Twitter</li>
+                <li>YouTube </li>
+            </ul>
+        </div>
+</div>
+
+<div class="footer">
+<p> &copy; Books & Posters 2022 unless otherwise stated</p>
+</div>
+</div>
+
+<script src="javascript\menu.js"></script>
+<script>window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}</script>
+</body>
+
+<style>
+input[type=text], select {
+  width: 80%;
+  padding: 12px 15px;
+  margin: 8px 0;
+  display: block;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+textarea[type=text], select{
+    width: 80%;
+    padding: 12px 15px;
+    margin: 8px 0;
+    display: block;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 60%;
+  background-color: #cc0099;
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #b30086;
+}
+
+.form{
+  width: 40%;
+  border-radius: 5px;
+  font-family: Arial;
+  background-color: #f2f2f2;
+  padding: 20px;
+  box-shadow: 5px 5px 2px grey;
+}
+
+.info{
+  font-family: Arial;
+  font-size: 15px;
+  padding: 20px;
+}
+
+</style>
+
+
+</html>

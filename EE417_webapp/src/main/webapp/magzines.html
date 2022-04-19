@@ -1,0 +1,286 @@
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--Linking the CSS document with this html file using below tag-->
+<link rel="stylesheet" type="text/css" href="stylesheets\stylesheet1.css">
+<script src="javascript\menu.js"></script>
+</head>
+<title > Books & Posters</title>
+<body>
+
+
+<!--Header of the website which contacins the site name and account, cart and contact us links-->
+<div class="header">
+  <ul> <a href="cart.html"><b>Cart</b></a></ul>
+  <ul><a href="account.html"><b>Account</b></a></ul>
+  <ul><a href="contact.html" target="blank"><b>Contact Us</b></a></ul>
+  <h1>BOOKS & POSTERS</h1>
+</div>
+
+<!--Creation of Navigation bar with unordered list and list elements-->
+<div class="topnav" id="navbar"><b>
+  <ul>
+    <li><button class="openbtn" onclick="openNav()">☰ BnP Menu</button></li>
+    <li><input type="text" placeholder="Search.."></li>
+    </ul></b>
+</div>
+
+
+<!--Dynamic Menu bar creation-->
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+  <a href="index.html">Home</a><button class="openbtn" onclick="openNav2()" style="float:right;color:black;background-color:white;font-size:20px;">></button>
+  <span class="dropdown">
+<!--Creation of Dropdown button with drop down elements as links-->
+  <a href="books.html" class="dropbtn">Books</a>
+  <div class="sidebar" id="mySidebar2">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()"><</a>
+  <a style= "color:#cc0099">Books</a>
+  <a href="#">Classics</a>
+  <a href="#">Biographies</a>
+  <a href="#">Fiction</a>
+  </div></span>
+  <a href="#" style= "color:#cc0099">Magazines</a>
+  <a href="comics.html">Comics</a>
+  <a href="posters.html" >Posters</a>
+  <a href="account.html"><b>Account</b></a>
+  <a href="contact.html" target="blank"><b>Contact Us</b></a>
+</div>
+
+<div class="content">
+
+<br><br><center>
+<div id="countt" ><h2 id="countc"><span style="font-size: 100px;color:#000066;" id="counters"></span><br/><label style="color: #cc0099;font-family: Arial;">Types of Magzines in circulation right now.. </label></h2></div>
+</div></center>
+
+<br><br>
+<!--Creating one row with five columns which has five pictures-->
+<div class="row">
+  <div class="column" style="padding-left:150px;">
+  
+    <!--class for displaying the images as polaroid tile when hovered on them-->
+    <div class="polaroid">
+    <!--adding the image and alternate name with inline style-->
+    <img src="Images\sn1.jpg" alt="Ticket to Mars" style="width:100%; height:200px">
+    <div class="container">
+    <p>Ticket to Mars</p>
+    </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="polaroid">
+    <img src="Images\sn2.jpg" alt="Myth of Recycling" style="width:100%; height:200px">
+    <div class="container">
+    <p>Myth of Recycling</p>
+    </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="polaroid">
+    <img src="Images\sn3.jpg" alt="Outer Limits" style="width:100%; height:200px">
+    <div class="container">
+    <p>Outer Limits</p>
+    </div>
+    </div>
+  </div>
+  <div class="column">
+  <div class="polaroid">
+  <img src="Images\sn4.jpg" alt="Therapies" style="width:100%; height:200px">
+  <div class="container">
+  <p>Therapies</p>
+  </div>
+  </div>
+  </div>
+  <div class="column">
+    <div class="polaroid">
+    <img src="Images\sn5.jpg" alt="The Long Climb" style="width:100%; height:200px">
+    <div class="container">
+    <p>The Long Climb</p>
+    </div>
+    </div>
+   </div>
+</div>
+
+<!--Creating one row with five columns which has five pictures-->
+<div class="row">
+  <div class="column" style="padding-left:150px;">
+  
+    <!--class for displaying the images as polaroid tile when hovered on them-->
+    <div class="polaroid">
+    <!--adding the image and alternate name with inline style-->
+    <img src="Images\f1.jpg" alt="The Girl On The Train" style="width:100%; height:200px">
+    <div class="container">
+    <p>NAtional Geo</p>
+    </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="polaroid">
+    <img src="Images\f2.jpg" alt="Eating well" style="width:100%; height:200px">
+    <div class="container">
+    <p>Eating well</p>
+    </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="polaroid">
+    <img src="Images\f3.jpg" alt="Saveur" style="width:100%; height:200px">
+    <div class="container">
+    <p>Saveur</p>
+    </div>
+    </div>
+  </div>
+  <div class="column">
+  <div class="polaroid">
+  <img src="Images\f4.jpg" alt="Easyfood" style="width:100%; height:200px">
+  <div class="container">
+  <p>Easyfood</p>
+  </div>
+  </div>
+  </div>
+  <div class="column">
+    <div class="polaroid">
+    <img src="Images\f5.jpg" alt="Good Food" style="width:100%; height:200px">
+    <div class="container">
+    <p>Good Food</p>
+    </div>
+    </div>
+   </div>
+</div>
+
+<!--Creating one row with five columns which has five pictures-->
+<div class="row">
+  <div class="column" style="padding-left:150px;">
+  
+    <!--class for displaying the images as polaroid tile when hovered on them-->
+    <div class="polaroid">
+    <!--adding the image and alternate name with inline style-->
+    <img src="Images\vogue1.jpg" alt="vogue1" style="width:100%; height:200px">
+    <div class="container">
+    <p>December</p>
+    </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="polaroid">
+    <img src="Images\vogue2.jpg" alt="vogue2" style="width:100%; height:200px">
+    <div class="container">
+    <p>February</p>
+    </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="polaroid">
+    <img src="Images\vogue3.jpg" alt="vogue3" style="width:100%; height:200px">
+    <div class="container">
+    <p>September</p>
+    </div>
+    </div>
+  </div>
+  <div class="column">
+  <div class="polaroid">
+  <img src="Images\vogue4.jpg" alt="vogue4" style="width:100%; height:200px">
+  <div class="container">
+  <p>March</p>
+  </div>
+  </div>
+  </div>
+  <div class="column">
+    <div class="polaroid">
+    <img src="Images\vogue5.jpg" alt="vogue5" style="width:100%; height:200px">
+    <div class="container">
+    <p>June</p>
+    </div>
+    </div>
+   </div>
+</div>
+
+
+
+<!--footer section which has the policies, account, social, and contact us details in unordered lists with lists items divided into 4 columns-->
+<div class="last">
+        <div class="last1">
+            <ul>
+                <li>
+                    <label><a href="account.html">My Account</a></label>
+                </li>
+                <li>Orders</li>
+                <li>Track Order </li>
+                <li>Frequently Asked Questions </li>
+            </ul>
+        </div>
+        <div class="last2">
+            <ul>
+                <li>
+                    <label>Policies</label>
+                </li>
+                <li>Offer Terms & Conditions</li>
+                <li>Returns & Exchange Policy</li>
+                <li>Privacy Policy</li>
+            </ul>
+        </div>
+
+        <div class="last3">
+            <ul>
+                <li>
+                    <label><a href="contact.html" target="_blank">Contact Us</a></label>
+                </li><br>
+                <li>
+                    <label> About Us</label>
+                </li>
+                <li>Official Brand Store</li>
+                <li>Careers</li>
+            </ul>
+        </div>
+        <div class="last4">
+            <ul>
+                <li>
+                    <label>Social</label>
+                </li>
+                <li>Facebook </li>
+                <li>Twitter</li>
+                <li>YouTube </li>
+            </ul>
+        </div>
+</div>
+
+<!--Footer section which has the copyright of the store-->
+<div class="footer">
+<p> &copy; Books & Posters 2022 unless otherwise stated</p>
+</div>
+</div>
+
+<script src="javascript\menu.js"></script>
+<script>window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}</script>
+<script>
+window.onload = function(){
+	
+  var count = document.getElementById("counters");
+  var i=0;
+  var time = setInterval(function(){count.innerHTML= i++ + "+";
+        
+        if(i==365)
+        {
+          clearInterval(time);
+        }
+        
+      },50);
+    
+}</script>
+
+
+</body>
+</html>

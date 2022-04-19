@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--Linking the CSS document with this html file using below tag-->
+<link rel="stylesheet" type="text/css" href="stylesheets\stylesheet1.css">
+<script src="javascript\menu.js"></script>
+<script src="javascript\valid.js"></script>
+<script src="javascript\jquery-3.6.0.min.js"></script>
+</head>
+<title > Books & Posters</title>
+<body>
+
+<!--Header of the website which contains the site name and account, cart and contact us links-->
+<div class="header">
+  <ul> <a href="cart.html"><b>Cart</b></a></ul>
+  <ul><a href="account.html"><b>Account</b></a></ul>
+  <ul><a href="contact.html" target="blank"><b>Contact Us</b></a></ul>
+  <h1>BOOKS & POSTERS</h1>
+</div>
+
+
+<!--Creation of Navigation bar with unordered list and list elements-->
+<div class="topnav" id="navbar"><b>
+<ul>
+  <li><button class="openbtn" onclick="openNav()">☰ BnP Menu</button></li>
+  <li><input type="text" placeholder="Search.."></li>
+  </ul></b>
+</div>
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="index.html">Home</a><button class="openbtn" onclick="openNav2()" style="float:right;color:black;background-color:white;font-size:20px;">></button>
+  <span class="dropdown">
+<!--Creation of Dropdown button with drop down elements as links-->
+  <a href="books.html" class="dropbtn">Books</a>
+  <div class="sidebar" id="mySidebar2">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()"><</a>
+  <a style= "color:#cc0099">Books</a>
+  <a href="#">Classics</a>
+  <a href="#">Biographies</a>
+  <a href="#">Fiction</a>
+  </div></span>
+  <a href="magzines.html">Magzines</a>
+  <a href="comics.html">Comics</a>
+  <a href="posters.html">Posters</a>
+  <a href="account.html"><b>Account</b></a>
+  <a href="contact.html" target="blank"><b>Contact Us</b></a>
+</div>
+
+<div class="content" style="padding-left:25%">
+<h1 style="font-family:arial;padding-left:30px;color:#cc0099">Membership form for Books and Posters</h1>
+<div class="form">
+<form name="signup" onsubmit="return upload()" autocomplete="off" action="UploadServlet" method="POST">
+    <label for="fname">First Name</label><span style="color:red; display: inline;">*</span>
+    <input type="text" id="fname" name="firstname" placeholder="Your first name.." onclick="suggest()"><span id="fsug"></span><br>
+
+    <label for="lname">Last Name</label><span style="color:red; display: inline;">*</span>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name.." onclick="suggest2()"><span id="lsug"></span><br>
+
+    <label for="email">Email</label><span style="color:red; display: inline;">*</span>
+    <input type="text" id="email" name="email" placeholder="Enter Your Email.." onclick="suggestemail()" ></input><span id="emailsug"></span><br>
+
+    <label>Password</label><span style="color:red; display: inline;">*</span>
+    <input type="password" id="passw" name="pas" placeholder="Enter password.." onclick="passug()">
+    <input type="checkbox" onclick="myFunc()">Show Password<br>
+    <span id="psug"></span><br>
+    
+
+    <label>Confirm Password</label><span style="color:red; display: inline;">*</span>
+    <input type="password" name="passconf" placeholder="Confirm password.." onclick="cpassug()">
+
+    <label for="Gender">Gender</label>
+    <select id="gender" name="gen" placeholder="Select Gender">
+      <option value="NA">Prefer not to say</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label>Date of Birth</label><span style="color:red; display: inline;">*</span> <br/>
+    <input name="dateob" type="date" id="dob"></input>
+
+    <label>Address</label><span style="color:red; display: inline;">*</span>
+    <textarea type="text" name="addr" rows="5" cols="60"  style="resize: none;" id="add"></textarea>
+
+    <label>Mobile/Telephone</label><span style="color:red; display: inline;">*</span>
+    <input type="text" name="tel" placeholder="Enter Your Phone no." id="tel" onclick="telsug()"><span id="tsug"></span><br>
+
+    <label for="card">Add BnP Card to Account</label><span style="color:red; display: inline;">*</span>
+    <input type="radio" name="mc" value="Yes"><label>Yes</label>
+    <input type="radio" name="mc" value="No"><label>No</label><br><br>
+    <input type="submit" value="Submit">
+
+  </form>
+</div>
+</div>
+<br><br>
+<!--Button to display the saved form details in the local storage-->
+<div><center>
+<button class="userbutton" onclick="userdisplay()">Display Users</button></center><br>
+<table class="tab" style="display:none;" id="Users">
+	<tr>	
+		<th>Firstname</th>
+		<th>Lastname</th>
+		<th>Email Id</th>
+		<th>Password</th>
+		<th>Gender</th>
+		<th>DOB</th>
+		<th>Address</th>
+		<th>Tel</th>
+		<th>BnP Card</th>
+	</tr>
+</table>
+
+</div>
+<br><br>
+<!--footer section which has the policies, account, social, and contact us details in unordered lists with lists items divided into 4 columns-->
+<div class="last">
+        <div class="last1">
+            <ul>
+                <li>
+                    <label><a href="account.html">My Account</a></label>
+                </li>
+                <li>Orders</li>
+                <li>Track Order </li>
+                <li>Frequently Asked Questions </li>
+            </ul>
+        </div>
+        <div class="last2">
+            <ul>
+                <li>
+                    <label>Policies</label>
+                </li>
+                <li>Offer Terms & Conditions</li>
+                <li>Returns & Exchange Policy</li>
+                <li>Privacy Policy</li>
+            </ul>
+        </div>
+
+        <div class="last3">
+            <ul>
+                <li>
+                    <label><a href="contact.html" target="_blank">Contact Us</a></label>
+                </li><br>
+                <li>
+                    <label> About Us</label>
+                </li>
+                <li>Official Brand Store</li>
+                <li>Careers</li>
+            </ul>
+        </div>
+        <div class="last4">
+            <ul>
+                <li>
+                    <label>Social</label>
+                </li>
+                <li>Facebook </li>
+                <li>Twitter</li>
+                <li>YouTube </li>
+            </ul>
+        </div>
+</div>
+
+<!--Footer section which has the copyright of the store-->
+<div class="footer">
+<p> &copy; Books & Posters 2022 unless otherwise stated</p>
+</div>
+
+<script>window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+function myFunc() {
+  var x = document.getElementById("passw");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+
+</body>
+
+<style>
+  input[type=text], select {
+    width: 60%;
+    padding: 12px 15px;
+    margin: 8px 0;
+    display: block;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  input[type=password], select {
+    width: 60%;
+    padding: 12px 15px;
+    margin: 8px 0;
+    display: block;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  input[type=date], select {
+    width: 60%;
+    padding: 12px 15px;
+    margin: 8px 0;
+    display: block;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  textarea[type=text], select{
+    width: 60%;
+    padding: 12px 15px;
+    margin: 8px 0;
+    display: block;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+    width: 60%;
+    background-color: #cc0099;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #b30086;
+  }
+  
+  .form{
+    width: 50%;
+    border-radius: 5px;
+    font-family: Arial;
+    background-color: #f2f2f2;
+    padding: 20px;
+    padding-left:10%;
+    box-shadow: 5px 5px 2px grey;
+  }
+
+  .userbutton{
+    align-self: center;
+    background-color: hsl(199, 100%, 35%);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+  }
+  
+  .tab{
+  width: 10in;
+  border-collapse: collapse;
+  border-radius: 50px;
+  margin: auto;
+  border: 1px solid;
+  }
+  
+  .tab td, .tab tr{
+  border: 1px solid black;
+  padding: 10px 10px;
+  border-radius: 5px;
+  }
+  
+  .tab th{
+  background-color: #b30086;
+  color: white;
+  padding: 5px; 
+  border: 1px solid black;
+  border-radius: 5px;
+  }
+  
+  .tab tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .tab tr:hover{
+  background-color: #ddd;
+  }
+  
+  </style>
+</html>

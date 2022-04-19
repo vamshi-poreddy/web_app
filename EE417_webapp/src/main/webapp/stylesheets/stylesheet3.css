@@ -1,0 +1,49 @@
+.book1{
+background-size:cover;
+padding:50px;
+padding-left:30%;
+}
+
+.book1 p{
+color:#000000;
+width:70%;
+padding-left:5px;
+font-size:35px;
+text-align:center;
+font-family:arial;
+font-weight:bold;
+background-color:#f2f2f2;
+text-decoration-line: underline;
+text-decoration-color:#800060;
+border-radius:20px;
+opacity:0.8;
+}
+
+.book1 ul{
+list-style-type:none;
+}
+
+.book1 li{
+color:#ffffff;
+padding:2px;
+padding-left:25%;
+font-size:30px;
+text-align:left;
+font-family:arial;
+font-weight:bold;
+}
+
+.book1 li:hover{
+text-decoration-line: underline;
+text-decoration-color:#00264d;
+}
+
+
+
+
+
+
+
+
+
+

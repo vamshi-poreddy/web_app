@@ -1,0 +1,339 @@
+
+
+/* Style the header */
+.header {
+  background-color: white;
+  color: #cc0099;
+  font-family: "Trebuchet MS", Monaco, Arial;
+  font-size: 25px;
+  text-align: left;
+}
+
+/*styling the header with tags <a> */
+.header a{
+  color: #cc0099;
+  text-decoration: none;
+}
+.header form{
+  color: #cc0099;
+  text-decoration: none;
+}
+
+.header ul{
+  font-family:Arial;
+  float:right;
+  font-size: 18px;
+  list-style-type:none;
+}
+
+.header a:hover {
+  color: black;
+}
+
+/* Navigation bar starts from here */
+
+.topnav ul {
+  list-style-type: none;
+  font-family: Arial,Verdana;
+  font-size:18px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #004080;
+  border-radius:5px;
+}
+
+/* bar at the left */
+.topnav li{
+  float: left;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #004080;
+  color: white;
+  font-weight:bold;
+  padding: 15px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #993399;
+}
+
+/* Styling the Search bar in the navigation tab */
+
+.topnav input[type=text] {
+  float:left;
+  width:50%;
+  padding:8px;
+  margin-top: 12px;
+  background-color: white;
+  margin-left: 300px;
+  margin-right: 10px;
+  border-radius:5px;
+  border:none;
+  font-size: 14px;
+  transition: width 0.4s ease-in-out;
+}
+
+/* Search bar extends when the moouse is clicked on it */
+.topnav input[type=text]:focus {
+  width: 100%;
+}
+
+/* Styling the dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  padding-left:20px;
+  background-color: #004080;
+  border-radius:5px;
+  font-size:14px;
+  min-width: 30px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Styling the dropdown content with tag <a> */
+div.dropdown-content a{
+  color: white;
+  padding: 12px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size:14px;
+}
+
+/* Styling the dropdown content with hover */
+div.dropdown-content a:hover {
+  background-color: #cc0099;
+  color: white;
+  border-radius:5px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.sidebar {
+  height: 60%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  border-radius:5px;
+  opacity:0.95;
+}
+
+.sidebar a {
+  padding: 12px 8px 8px 32px;
+  text-decoration: none;
+  font-family:Arial;
+  font-weight:bold;
+  font-size: 20px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #cc0099;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  color:black;
+  right: 20px;
+  font-size: 36px;
+  margin-left: 60px;
+}
+
+
+/* Styling the Image placed in the middle of the home section after best selling books*/
+.banner{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:50%;
+  margin: 1.563em auto;
+}
+
+div.banner a {
+    text-decoration: none;
+    color: black;
+    cursor: default;
+    font-weight: normal;
+}
+
+/* Adding a tooltip to the image to know more about it when moused is moved on to it tooltip is displayed on top */
+div.banner a span {
+    visibility: hidden;
+    position: absolute;
+    left: 15em;
+    top: -2.3em;
+    background: #f2f2f2;
+    width: 14em;
+    border: 2px solid #808080;
+    font-size: 14px;
+    font-family:Arial;
+    padding: 0.3em;
+    cursor: default;
+    line-height: 1.4;
+    border-radius:5px;
+}
+
+div.banner a:hover span {
+    visibility: visible;
+}
+
+.bestsellers{
+padding-left:40%;
+}
+
+/* paragraph tag in the bs class is styled which are the tiltle sections for books, magzines */
+.bs p{
+background-color:#000066;
+width:30%;
+border-radius:5px;
+padding:10px;
+color:white;
+font-family:Arial;
+font-size:18px;
+font-weight:bold;
+text-align:center;
+}
+
+/* Create 5 equal columns that floats next to each other */
+.column {
+  float: left;
+  width:18%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+/* Creates small section for images with background white */
+div.polaroid {
+  width: 50%;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+/* Used for the pictures in the home section to come out as tiles with shadow */ 
+div.polaroid:hover{
+ box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+/* Container below the images of the books, comics and magazines which has the names of them styled accordingly */
+div.container {
+  text-align: center;
+  padding-bottom:1px;
+  font-family:Arial;
+  font-size:14px;
+  color:#cc0099;
+  font-weight:700;
+}
+
+/* Styling the inf class which has the information of the store like delivery and other */
+.inf {
+    display: flex;
+    font-family: "Times New Roman";
+    padding-bottom: 10px;
+    align-content: center;
+    background-color: #f2f2f2;
+    color: #00004d;
+    font-size: 16px;
+    text-align:center;
+}
+
+.inf label {
+    font-size: 18px;
+}
+
+/* divided into 3 sections and flex is used to grow side by side for the 3 classes*/
+.inf1,.inf2,.inf3 {
+    flex-grow: 1;
+    width: 33.33%;
+}
+
+/*Tearms and conditions section*/
+
+.last {
+    display: flex;
+    font-family: Arial, Verdana;
+    padding-bottom: 1px;
+    align-content: center;
+    background-color: #004080;
+    color: white;
+    font-size: 9pt;
+}
+
+.last label {
+    font-size: 11pt;
+}
+.last a:hover {
+    color: #80bfff;
+}
+
+.last a{
+  color:white;
+  text-decoration: none;
+}
+
+.last ul {
+    padding-left:120px;
+    list-style-type: none;
+}
+
+/* divided into four sections and flex is used to grow side by side for the unordered list */
+.last1,.last2,.last3,.last4 {
+    
+    flex-grow: 1;
+    width: 25%;
+}
+
+/* Style the footer */
+.footer {
+  background-color: #004080;
+  color: white;
+  font-family:Arial, Verdana;
+  font-size:10pt;
+  padding-top:0.1px;
+  text-align: center;
+}
+
+
+
+
+
+
